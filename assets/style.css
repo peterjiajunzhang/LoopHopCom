@@ -1,0 +1,96 @@
+:root {
+  color-scheme: dark;
+  --background: #211e32;
+  --surface: #2d293f;
+  --text: #f7f4ff;
+  --muted: #bbb4cf;
+  --lime: #d0ff72;
+  --line: #454055;
+  --purple: #bea5fc;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--background); color: var(--text); font-size: 1rem; line-height: 1.6; }
+a { color: inherit; text-underline-offset: .24em; }
+a:hover { color: var(--lime); }
+a:focus-visible { outline: 3px solid var(--lime); outline-offset: 6px; border-radius: 4px; }
+img { max-width: 100%; display: block; }
+.site-shell { max-width: 1192px; padding: 0 48px; margin-inline: auto; }
+.skip-link { position: absolute; left: 24px; top: -100px; background: var(--lime); color: var(--background); padding: 12px 20px; z-index: 10; border-radius: 12px; }
+.skip-link:focus { top: 12px; color: var(--background); }
+.site-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; padding: 30px 0; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-size: 1.2rem; font-weight: 750; letter-spacing: -.025em; }
+.brand img { border-radius: 13px; }
+.brand-cn { margin-left: 8px; font-size: .875rem; font-weight: 500; color: var(--muted); letter-spacing: 0; }
+nav { display: flex; gap: 30px; font-size: .9375rem; }
+nav a { text-decoration: none; }
+.hero { display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; gap: 72px; padding: 46px 34px 70px 0; }
+.release-note { display: inline-block; margin: 0 0 24px; padding: 7px 14px; border: 1px solid var(--line); border-radius: 100px; font-size: .875rem; font-weight: 550; color: var(--purple); }
+h1 { margin: 0; font-size: clamp(4.2rem, 7.8vw, 6.5rem); line-height: .98; font-weight: 850; letter-spacing: -.075em; }
+h1 span { color: var(--lime); }
+.hero-description { max-width: 420px; margin: 28px 0 0; font-size: 1.1875rem; line-height: 1.65; color: #ddd7eb; }
+.play-note { color: var(--muted); font-size: .9375rem; margin: 24px 0 0; }
+.game-preview { margin: 0; justify-self: center; width: 268px; max-width: 100%; }
+.screen-wrap { padding: 7px; background: #110f1c; border: 1px solid #575065; border-radius: 36px; box-shadow: 16px 22px 0 #302a45; transform: rotate(4deg); }
+.game-screen { width: 100%; height: auto; border-radius: 28px; }
+figcaption { color: var(--muted); text-align: center; margin-top: 29px; font-size: .8125rem; }
+.game-details { border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(3, 1fr); gap: 42px; padding: 42px 0 48px; }
+.detail-label, .eyebrow { font-size: .75rem; font-weight: 700; letter-spacing: .11em; color: var(--purple); }
+h2 { font-size: 1.375rem; letter-spacing: -.035em; line-height: 1.3; }
+.game-details h2 { margin: 12px 0 10px; }
+.game-details p { color: var(--muted); margin: 0; line-height: 1.7; }
+.support { display: flex; align-items: center; justify-content: space-between; gap: 32px; background: var(--surface); padding: 34px 36px; border-radius: 26px; scroll-margin-top: 24px; }
+.support .eyebrow { margin: 0 0 7px; }
+.support h2 { margin: 0 0 10px; font-size: 1.75rem; }
+.support p:not(.eyebrow) { color: var(--muted); margin: 0; font-size: .9375rem; }
+.email-link { display: inline-flex; align-items: center; gap: 18px; min-width: 0; max-width: 100%; color: var(--lime); font-size: 1rem; font-weight: 600; }
+.email-address { min-width: 0; overflow-wrap: anywhere; }
+.email-arrow { flex: 0 0 auto; text-decoration: none; font-size: 1.5rem; }
+.site-footer { display: flex; align-items: center; justify-content: space-between; padding: 28px 0 30px; font-size: .875rem; color: var(--muted); }
+.site-footer a { text-decoration: none; }
+.policy { max-width: 740px; margin: 34px auto 64px; }
+.back-link { display: inline-block; color: var(--purple); font-size: .9375rem; margin-bottom: 30px; }
+.policy h1 { font-size: clamp(2.4rem, 6vw, 3.7rem); line-height: 1.1; letter-spacing: -.055em; }
+.policy .updated { margin: 17px 0 35px; color: var(--muted); font-size: .875rem; }
+.policy-content h2 { font-size: 1.375rem; margin: 34px 0 12px; }
+.policy-content p, .policy-content li { color: #ddd7eb; line-height: 1.8; }
+.policy-content p { margin: 12px 0; }
+.policy-content ul { padding-left: 24px; }
+.policy-content li { padding-left: 4px; margin: 7px 0; }
+.policy-content a { color: var(--lime); overflow-wrap: anywhere; }
+@media (max-width: 900px) {
+  .site-shell { padding-inline: 32px; }
+  .hero { gap: 44px; padding-right: 20px; }
+  .game-preview { width: 235px; }
+  .game-details { gap: 25px; }
+  .support { align-items: flex-start; flex-direction: column; gap: 22px; }
+}
+@media (max-width: 640px) {
+  .site-shell { padding-inline: 24px; }
+  .site-header { padding: 22px 0; gap: 16px; }
+  .brand { font-size: 1.0625rem; gap: 10px; }
+  .brand img { width: 38px; height: 38px; border-radius: 11px; }
+  .brand-cn { display: none; }
+  nav { gap: 18px; font-size: .875rem; }
+  .hero { grid-template-columns: 1fr; gap: 42px; padding: 30px 0 48px; }
+  .hero-copy { text-align: center; }
+  .release-note { margin-bottom: 22px; }
+  h1 { font-size: clamp(2.5rem, 17vw, 6rem); }
+  .hero-description { margin: 25px auto 0; max-width: 370px; font-size: 1.0625rem; }
+  .play-note { margin-top: 20px; font-size: .875rem; }
+  .game-preview { width: 235px; }
+  .screen-wrap { transform: rotate(3deg); box-shadow: 10px 15px 0 #302a45; }
+  figcaption { margin-top: 25px; }
+  .game-details { grid-template-columns: 1fr; gap: 28px; padding: 34px 0; }
+  .game-details h2 { margin-top: 9px; }
+  .game-details p { max-width: 450px; }
+  .support { padding: 27px 24px; border-radius: 22px; }
+  .support h2 { font-size: 1.55rem; }
+  .email-link { font-size: .9375rem; gap: 12px; overflow-wrap: anywhere; }
+  .policy { margin-top: 25px; margin-bottom: 40px; }
+  .policy-content h2 { margin-top: 29px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
