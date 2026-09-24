@@ -10,4 +10,4 @@ python3 -m http.server 4173
 
 Then open `http://localhost:4173/` in a browser.
 
-For GitHub Pages, publish from the `main` branch and the `/ (root)` folder.
+The public project site is served from the `main` branch and the `/ (root)` folder at `https://peterjiajunzhang.github.io/LoopHopCom/`.
